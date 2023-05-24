@@ -1,17 +1,13 @@
+import { Box } from '@chakra-ui/react';
+import { LayoutPage } from 'pages';
+import { Route, Routes } from 'react-router-dom';
+
 export const App = () => {
 	return (
-		<div
-			style={{
-				height: '100vh',
-				display: 'flex',
-				justifyContent: 'center',
-				alignItems: 'center',
-				fontSize: 40,
-				backgroundColor: 'blue',
-				color: 'burlywood',
-			}}
-		>
-			React homework template
-		</div>
+		<Box overflow="" display="flex" flexDirection="column">
+			<Routes>
+				<Route path="/" element={<LayoutPage />}></Route>
+			</Routes>
+		</Box>
 	);
 };
