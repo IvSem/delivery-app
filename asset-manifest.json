@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/eliftech-delivery-app/static/css/main.7acaea2f.css",
+    "main.js": "/eliftech-delivery-app/static/js/main.1315f004.js",
+    "index.html": "/eliftech-delivery-app/index.html",
+    "main.7acaea2f.css.map": "/eliftech-delivery-app/static/css/main.7acaea2f.css.map",
+    "main.1315f004.js.map": "/eliftech-delivery-app/static/js/main.1315f004.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.1315f004.js"
+  ]
+}
