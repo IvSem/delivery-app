@@ -5,7 +5,9 @@ const LayoutPage = () => {
 	return (
 		<>
 			<Header />
-			<Outlet />
+			<main className="container">
+				<Outlet />
+			</main>
 		</>
 	);
 };

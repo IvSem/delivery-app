@@ -1,12 +1,13 @@
-//const CartPage = () => {
-//	const cartData = useSelector(state => state.cart);
-//	return (
-//		<Cart
-//			itensNoCarrinho={cartData.itens}
-//			closeCart={closeCart}
-//			isCartShow={isCartShow}
-//		/>
-//	);
-//};
+import { useSelector } from 'react-redux';
 
-//export default CartPage;
+const CartPage = () => {
+	const cartData = useSelector(state => state.cart);
+	console.log(':>  CartPage  cartData:', cartData);
+	return (
+		<>
+			<h1>Hello</h1>
+		</>
+	);
+};
+
+export default CartPage;

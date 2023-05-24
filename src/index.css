@@ -4,7 +4,13 @@
 	--text-1: #3b3938;
 	--text-2: rgba(72, 68, 61, 0.5);
 	--border: rgba(173, 169, 114, 0.2);
-	--bg: #fbfcf3;
+	--bg: #eceee2;
+	--bg-gr: linear-gradient(
+		214deg,
+		rgba(34, 193, 195, 1) 0%,
+		rgba(211, 188, 74, 1) 86%,
+		rgba(255, 240, 207, 1) 100%
+	);
 	--sec: #f0b761;
 }
 
@@ -74,7 +80,7 @@ body {
 
 main {
 	min-height: calc(100vh - 4rem);
-	padding-top: 7.5rem;
+	padding-top: 1rem;
 	padding-bottom: 3rem;
 	position: relative;
 }
