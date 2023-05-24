@@ -1,6 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = { items: [], totalItems: 0, totalAmount: 0 };
+const initialState = {
+	items: [
+		{
+			name: 'Jarritos Lemon',
+			description: 'Lemon flavored soda (370ml).',
+			price: '5.59',
+			img: 'beb4.webp',
+			id: 'beb4',
+		},
+		{
+			name: 'Heineken',
+			description: '330ml bottle of Heineken.',
+			price: '5.99',
+			img: 'beb5.webp',
+			id: 'beb5',
+		},
+	],
+	totalItems: 0,
+	totalAmount: 0,
+};
 
 export const cartSlice = createSlice({
 	name: 'cart',

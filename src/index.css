@@ -1,6 +1,12 @@
 @import-normalize; /* bring in normalize.css styles */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+:root {
+	--text-1: #3b3938;
+	--text-2: rgba(72, 68, 61, 0.5);
+	--border: rgba(173, 169, 114, 0.2);
+	--bg: #fbfcf3;
+	--sec: #f0b761;
+}
 
 * {
 	box-sizing: border-box;
@@ -36,8 +42,53 @@ ul {
 }
 
 body {
-	color: #3b3938;
+	color: var(--text-1);
 	font-family: 'Inter', sans-serif;
 	font-size: 16px;
-	background: #fbfcf3;
+	background: var(--bg);
+}
+
+.container {
+	max-width: 1150px;
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+
+.btn-style {
+	padding: 0.6rem 1.1rem;
+	background: var(--text-1);
+	border-radius: 0.2rem;
+	color: var(--bg);
+	font-size: 0.9rem;
+	transition: 0.2s;
+	border: 2px solid transparent;
+}
+
+.btn-style:hover {
+	background: var(--sec);
+	color: var(--text-1);
+	border: 2px solid var(--text-1);
+}
+
+main {
+	min-height: calc(100vh - 4rem);
+	padding-top: 7.5rem;
+	padding-bottom: 3rem;
+	position: relative;
+}
+h1 {
+	font-size: 3rem;
+}
+
+@media (max-width: 580px) {
+	.btn-style {
+		padding: 0.5rem;
+	}
+}
+@media (max-width: 450px) {
+	body {
+		font-size: 14px;
+	}
 }

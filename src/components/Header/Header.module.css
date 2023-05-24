@@ -1,0 +1,186 @@
+.header {
+	height: 4.5rem;
+	border-bottom: 1px solid var(--border);
+	position: fixed;
+	background: var(--bg);
+	width: 100%;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05);
+	z-index: 10;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.container > * {
+	flex: 1;
+}
+
+.cart {
+	text-align: right;
+	position: relative;
+}
+
+.logo {
+	font-weight: bold;
+	font-size: 1.2rem;
+	display: flex;
+	justify-content: center;
+}
+
+.logo svg {
+	width: 20px;
+	height: 20px;
+	margin-bottom: -3px;
+	margin-right: 0.3rem;
+	fill: var(--text-1);
+}
+
+.header nav a {
+	padding: 0.5rem;
+	border: 1px solid transparent;
+}
+
+.header nav a:hover {
+	color: var(--sec);
+}
+
+.header nav a + a {
+	margin-left: 0.8rem;
+}
+
+.header .linkActive {
+	border-bottom: 2px solid var(--sec);
+}
+
+.btnCart {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+
+.btnCart:disabled {
+	background: rgb(138, 138, 133);
+	cursor: not-allowed;
+}
+
+.btnCart:disabled:hover {
+	border-color: transparent;
+	color: var(--bg);
+}
+
+.btnCart.btnActive {
+	box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--sec);
+	background: var(--sec);
+	color: var(--text-1);
+	border: 2px solid var(--text-1);
+}
+
+.btnCart svg {
+	width: 20px;
+	height: 20px;
+	margin-top: -3px;
+	margin-left: 0.5rem;
+}
+
+.cartItems {
+	background: var(--sec);
+	min-width: 30px;
+	min-height: 30px;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	color: var(--text-1);
+	font-weight: bold;
+	border: 2px solid var(--text-1);
+	position: absolute;
+	top: -12px;
+	right: -10px;
+}
+
+.menuBtn {
+	display: none;
+}
+
+@media (max-width: 580px) {
+	.menuBtn {
+		display: block;
+		min-width: calc(40px - 4px);
+		min-height: calc(40px - 4px);
+		margin-left: auto;
+		margin-right: 1rem;
+		border-radius: 0.2rem;
+		transition: 0.2s;
+	}
+
+	.menuBtn.active {
+		box-shadow: 0 0 0 2px var(--text-1);
+	}
+
+	.menuBtn svg {
+		width: 30px;
+		height: 30px;
+		margin-top: 3px;
+	}
+
+	.container {
+		justify-content: space-between;
+	}
+
+	.container > * {
+		flex: 0;
+	}
+
+	.header nav {
+		position: absolute;
+		background: var(--bg);
+		flex-direction: column;
+		text-align: center;
+		padding: 1rem;
+		border: 1px solid var(--border);
+		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+		top: 4.5rem;
+		right: 55px;
+		border-radius: 0.2rem;
+		display: flex;
+		visibility: hidden;
+		transition: 0.3s;
+		transform: translate3d(1rem, 0, 0);
+		opacity: 0;
+	}
+
+	.header nav.active {
+		display: flex;
+		opacity: 1;
+		visibility: visible;
+		transform: translate3d(0, 0, 0);
+	}
+
+	.header nav a + a {
+		margin-left: 0;
+	}
+
+	.header .linkActive {
+		border-bottom: none;
+		color: var(--sec);
+	}
+
+	.btnCart span:nth-of-type(1) {
+		display: none;
+	}
+
+	.btnCart {
+		width: 40px;
+		height: 40px;
+		padding: 0.5rem;
+	}
+
+	.btnCart svg {
+		margin-left: 0;
+		width: 25px;
+		height: 25px;
+	}
+}

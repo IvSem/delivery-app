@@ -1,0 +1,77 @@
+.cart {
+	position: absolute;
+	background: var(--bg);
+	border-radius: 0.2rem;
+	border: 1px solid var(--border);
+	right: 0;
+	top: calc(100% + 1rem);
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+	visibility: hidden;
+	transition: 0.3s;
+	transform: translate3d(1rem, 0, 0);
+	opacity: 0;
+	min-width: 370px;
+}
+
+.cart.active {
+	opacity: 1;
+	visibility: visible;
+	transform: translate3d(0, 0, 0);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 1rem;
+	border-bottom: 1px solid var(--border);
+	width: 100%;
+}
+
+.header button {
+	color: red;
+	margin-left: 2rem;
+	transition: all 0.3s ease 0s;
+}
+.header button:focus,
+.header button:hover {
+	color: rgb(232, 81, 81);
+	text-shadow: 0px 0px 10px rgb(171, 74, 74);
+}
+
+.cartList {
+	max-height: 20rem;
+	overflow: auto;
+	padding: 1rem;
+}
+
+.popupCart {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	border-top: 1px solid var(--border);
+}
+
+.total {
+	color: var(--text-2);
+	text-align: left;
+	margin-right: 2rem;
+}
+
+.total span {
+	font-weight: bold;
+	color: var(--text-1);
+}
+
+.noItems {
+	margin: 1.5rem 0;
+	text-align: center;
+	padding: 1rem;
+}
+
+@media (max-width: 450px) {
+	.cart {
+		width: calc(100vw - 30px);
+		min-width: initial;
+	}
+}
