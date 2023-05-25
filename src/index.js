@@ -8,7 +8,7 @@ import { store } from 'redux/store';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
-		<BrowserRouter basename="/eliftech-delivery-app">
+		<BrowserRouter basename="/delivery-app">
 			<Provider store={store}>
 				<App />
 			</Provider>
